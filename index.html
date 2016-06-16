@@ -19,13 +19,12 @@
 <div id="header">
     <div class="logo">
         <h1>bullsfirst</h1>
-
-        <div class="subtitle">Calling All Bull Markets</div>
+        <h2>Calling All Bull Markets</h2>
     </div>
 
     <div class="actions">
-        <button>Trade</button>
-        <button>Transfer</button>
+        <button><img src="img/trade-icon.png"/><br/>Trade</button>
+        <button><img src="img/transfer-icon.png"/><br/>Transfer</button>
     </div>
 </div>
 
@@ -36,23 +35,23 @@
             <strong>Accounts</strong>
 
             <div class="actions">
-                <button ng-click="addAccount()">Add Account</button>
-                <button>Refresh</button>
+                <button ng-click="addAccount()"><img src="img/plus-icon.png" style="vertical-align: middle;" /><span>Add Account</span></button>
+                <button><img style="vertical-align: middle;" src="img/refresh-icon.png"/><span style="font-">Refresh</span></button>
             </div>
         </div>
 
         <table>
             <tr>
-                <th>Name</th>
+                <th style="text-align:left;">Name</th>
                 <th>Market Value</th>
-                <th>Cash</th>
+                <th style="text-align:right;">Cash</th>
                 <th>Legend</th>
             </tr>
 
             <tr ng-repeat="row in rows">
                 <td>{{ row.name }}</td>
-                <td>{{ row.marketValue | currency }}</td>
-                <td>{{ row.cash | currency }}</td>
+                <td style="text-align:right;">{{ row.marketValue | currency }}</td>
+                <td style="text-align:right;">{{ row.cash | currency }}</td>
                 <td>
                     <div class="legend" style="background-color: {{ row.legend }}"></div>
                 </td>
@@ -74,6 +73,7 @@
     </div>
 
     <div class="right-section">
+        <div class="chart-title">All Accounts</div>
         <img class="chart" src="chart.png" alt="Chart">
 
         <div class="help-label">Click on an account to view positions</div>
