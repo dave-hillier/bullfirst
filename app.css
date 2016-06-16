@@ -1,6 +1,23 @@
+@font-face {
+    font-family: "Aller";
+    src: url("fonts/aller_rg-webfont.woff") format('woff');
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url("fonts/aller_bd-webfont.woff") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url("fonts/aller_it-webfont.woff") format('woff');
+    font-weight: italic;
+}
+
 body {
     font-size: 14px;
-    font-family: "Helvetica Neue", "Arial", "sans-serif";
+    font-family: "Aller";
 
     max-width: 1000px;
     margin: 0 auto;
@@ -41,6 +58,7 @@ img {
 
 #header .logo .subtitle {
     font-size: 0.8rem;
+    font-style: italic;
 }
 
 #header .actions {
@@ -48,6 +66,7 @@ img {
     display: flex;
     justify-content: flex-end;
 }
+
 #header .actions button {
 }
 
