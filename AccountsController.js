@@ -1,4 +1,4 @@
-appRoot.controller('AccountsController', function($scope){
+bullsfirstModule.controller('AccountsController', function($scope){
 
     $scope.rows = [
         {
