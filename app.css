@@ -36,26 +36,37 @@ button {
 
 table {
     width: 100%;
+    border-collapse:collapse;
 }
 table td {
-    padding: 5px;
+    padding: 5px 15px 5px 15px;
+    border-top: 1px solid #ccc;
+}
+
+table th {
+  background-color: #8C8C8C;
+  color: #F8E5C9;
+  font: bold normal 11px/22px Aller;
+  height: 22px;
+  text-transform: uppercase;
+  padding: 2px 15px 2px 15px;
 }
 
 /* Header */
 #header {
     display: flex;
-    background: orange;
-    padding: 30px 20px;
+    background: #F89F1B;
+    padding: 30px 8%;
 }
 
 #header .logo h1 {
-    margin: 3px 0;
+    margin: 0;
     font-weight: normal;
 }
 
 #header .logo h2 {
     font-style: italic;
-    margin: 8px 5px 0 0;
+    margin: 0;
     padding-left: 28px;
     font-size: 1.1em;
     font-style: italic;
@@ -82,6 +93,8 @@ table td {
 #content {
     display: flex;
     margin-top: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 /* Left Section */
@@ -104,25 +117,18 @@ table td {
     justify-content: flex-end;
 }
 
-table { 
-    border-collapse:collapse 
-}
 
-th {
-  background-color: #8C8C8C;
-  color: #F8E5C9;
-  font: bold normal 11px/22px Aller;
-  height: 22px;
-  text-transform: uppercase;
-}
+
 
 .totals td {
-    border-top: 3px solid #ccc;
+    border-top: 3px solid #8C8C8C;
 }
 
 .legend {
     width: 30px;
     height: 16px;
+    margin: 0 auto; 
+    border: 1px solid silver;
 }
 
 /* Right Section */
@@ -141,4 +147,6 @@ th {
 .right-section .help-label {
     padding: 10px;
     font-style: italic;
+    color: grey;
+    font-size: 0.8em;
 }
