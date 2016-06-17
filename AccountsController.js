@@ -1,5 +1,6 @@
 bullsfirstModule.controller('AccountsController', function($scope){
 
+    // TODO: Data should come from service
     $scope.rows = [
         {
             name: 'Brokerage Account 3',
@@ -64,6 +65,7 @@ bullsfirstModule.controller('AccountsController', function($scope){
         legend: 'none'
     };
 
+    // TODO: Not recalculated.
     for (var i = 0; i < $scope.rows.length; i++) {
         $scope.totals.marketValue += $scope.rows[i].marketValue;
         $scope.totals.cash += $scope.rows[i].cash;

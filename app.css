@@ -15,6 +15,7 @@
     font-weight: italic;
 }
 
+/* TODO: limit the scope of these globals */
 body {
     font-size: 14px;
     font-family: "Aller";
@@ -122,9 +123,6 @@ table th {
     display: flex;
     justify-content: flex-end;
 }
-
-
-
 
 .totals td {
     border-top: 3px solid #8C8C8C;
