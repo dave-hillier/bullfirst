@@ -2,9 +2,15 @@
   "name": "bullsfirst",
   "version": "0.0.1",
   "scripts": {
-    "start": "ws --port=3000"
+    "start": "ws --port=3000",
+    "test": "karma start test/config/karma.conf.js"
   },
   "devDependencies": {
+    "angular-mocks": "1.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
     "local-web-server": "^0.5.23"
   },
   "dependencies": {

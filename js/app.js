@@ -1,1 +1,3 @@
-var bullsfirstModule = angular.module('bullsfirst', []);
+/*global angular */
+
+angular.module('bullsfirst', []);
