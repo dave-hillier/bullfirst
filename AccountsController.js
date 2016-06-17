@@ -10,7 +10,6 @@ bullsfirstModule.controller('AccountsController', function($scope, accountsStora
     };
 
 	$scope.$watch('rows', function () {
-        console.log('watch');
         for (var i = 0; i < rows.length; i++) {
             $scope.totals.marketValue += rows[i].marketValue;
             $scope.totals.cash += rows[i].cash;

@@ -57,11 +57,9 @@ bullsfirstModule.service('accountsStorage', function() {
             }
         ];
     this.get = function () {
-        console.log('get');
         return accounts; // returning a reference?
     };
     this.put = function (newAccounts) {
-        console.log('put');
         accounts = newAccounts; // Might not make any difference? 
     };
 });
