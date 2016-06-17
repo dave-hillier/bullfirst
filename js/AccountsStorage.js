@@ -57,7 +57,7 @@ bullsfirstModule.service('accountsStorage', function() {
             }
         ];
     this.get = function () {
-        return accounts; // returning a reference?
+        return accounts; // returning a reference? // COnsider deep copy
     };
     this.put = function (newAccounts) {
         accounts = newAccounts; // Might not make any difference? 
