@@ -71,9 +71,10 @@ Consider using Sass or postcss
 Validate, pre-process and minify
 
 
-## Design enchancements
+## Design enhancements
 - [x] Fixed button styles
 - [x] Found a matching font 
-- [x] Added Images
+- [x] Added Images for buttons
+- [x] Cut out the logo and added some horns to the title
 - [x] Styled table
-- [x] 
+- [ ] Add grey border & footer
