@@ -42,15 +42,15 @@ describe('AccountsController', function () {
     scope.addAccount();
     scope.$digest();
 
-    expect(scope.totals.marketValue).not.toBe(0);
-    expect(scope.totals.cash).not.toBe(0);
+    expect(scope.totals.marketValue).toBeGreaterThan(0);
+    expect(scope.totals.cash).toBeGreaterThan(0);
   });
 
   it("put to service after add", function () {
     scope.addAccount();
     scope.$digest();
 
-    expect(accountsStorage.putCount).not.toBe(0);
+    expect(accountsStorage.putCount).toBeGreaterThan(0);
   });
 });
 
