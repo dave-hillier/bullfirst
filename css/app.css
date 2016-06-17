@@ -4,22 +4,21 @@
 }
 
 @font-face {
-    font-family: "myfont";
+    font-family: "Aller";
     src: url("../fonts/aller_bd-webfont.woff") format('woff');
     font-weight: bold;
 }
 
 @font-face {
-    font-family: "myfont";
+    font-family: "Aller";
     src: url("../fonts/aller_it-webfont.woff") format('woff');
-    font-weight: italic;
+    font-style: italic;
 }
 
 /* TODO: limit the scope of these globals */
 body {
     font-size: 14px;
-    font-family: "Aller";
-
+    font-family: Aller, sans-serif;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -32,24 +31,6 @@ button {
     display: block;
     text-decoration: none;
     transition: background-color 0.3s;
-}
-
-table {
-    width: 100%;
-    border-collapse:collapse;
-}
-table td {
-    padding: 5px 15px 5px 15px;
-    border-top: 1px solid #ccc;
-}
-
-table th {
-  background-color: #8C8C8C;
-  color: #F8E5C9;
-  font: bold normal 11px/22px Aller;
-  height: 22px;
-  text-transform: uppercase;
-  padding: 2px 15px 2px 15px;
 }
 
 /* Header */
@@ -69,7 +50,6 @@ table th {
     margin: 0;
     padding-left: 18px;
     font-size: 0.97em;
-    font-style: italic;
     font-weight: normal;
 }
 
@@ -103,6 +83,24 @@ table th {
     padding-right: 8%;
 }
 
+#content table {
+    width: 100%;
+    border-collapse:collapse;
+}
+#content table td {
+    padding: 5px 15px 5px 15px;
+    border-top: 1px solid #ccc;
+}
+
+#content table th {
+    background-color: #8C8C8C;
+    color: #F8E5C9;
+    font: bold normal 11px/22px Aller;
+    height: 22px;
+    text-transform: uppercase;
+    padding: 2px 15px 2px 15px;
+}
+
 /* Left Section */
 
 .left-section {
@@ -124,7 +122,7 @@ table th {
     vertical-align: middle;
 }
 
-.left-section .header > .actions { /* avoid*/ 
+.left-section .header > .actions { /* Should child selectors be avoided */
     flex: 1;
     display: flex;
     justify-content: flex-end;
