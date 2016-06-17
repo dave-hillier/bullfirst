@@ -18,7 +18,7 @@
 <!-- Header -->
 <div id="header">
     <div class="logo">
-        <img src="img/horns.png" style="margin-bottom: -11px;"/>
+        <img src="img/horns.png"/>
         <h1>bullsfirst</h1>
         <h2>Calling All Bull Markets</h2>
     </div>
@@ -36,23 +36,23 @@
             <strong>Accounts</strong>
 
             <div class="actions">
-                <button ng-click="addAccount()"><img src="img/plus-icon.png" style="vertical-align: middle;" /><span>Add Account</span></button>
-                <button><img style="vertical-align: middle;" src="img/refresh-icon.png"/><span style="font-">Refresh</span></button>
+                <button ng-click="addAccount()"><img src="img/plus-icon.png"/><span>Add Account</span></button>
+                <button><img src="img/refresh-icon.png"/><span style="font-">Refresh</span></button>
             </div>
         </div>
 
         <table>
             <tr>
-                <th style="text-align:left;">Name</th>
-                <th style="text-align:right;">Market Value</th>
-                <th style="text-align:right;">Cash</th>
+                <th class="left-align">Name</th>
+                <th class="right-align">Market Value</th>
+                <th class="right-align">Cash</th>
                 <th>Legend</th>
             </tr>
 
             <tr ng-repeat="row in rows">
                 <td>{{ row.name }}</td>
-                <td style="text-align:right;">{{ row.marketValue | currency }}</td>
-                <td style="text-align:right;">{{ row.cash | currency }}</td>
+                <td class="right-align">{{ row.marketValue | currency }}</td>
+                <td class="right-align">{{ row.cash | currency }}</td>
                 <td>
                     <div class="legend" style="background-color: {{ row.legend }}"></div>
                 </td>
@@ -60,10 +60,10 @@
 
             <tr class="totals">
                 <td></td>
-                <td style="text-align:right;">
+                <td class="right-align">
                     <strong>{{ totals.marketValue | currency }}</strong>
                 </td>
-                <td style="text-align:right;">
+                <td class="right-align">
                     <strong>{{ totals.cash | currency }}</strong>
                 </td>
                 <td></td>
