@@ -84,6 +84,7 @@ button {
 }
 
 #content table {
+    margin-top: 3px;
     width: 100%;
     border-collapse:collapse;
 }
