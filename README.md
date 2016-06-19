@@ -41,6 +41,9 @@ NPM is already in use for the project, I have no problem in using it to manage d
 I prefer to group things by feature rather than by type, but given the simplicity of this app I have grouped this way. 
 This approach scales to moderately complex. Grouping by feature is difficult to show with only one feature. 
 
+## Split HTML into templates
+While this page is relatively simple, I think that having smaller files with specific purposes makes the HTML easier to navigate and as each part is smaller, therefore easier to reason about.
+
 ## CSS
 ### Responsive
 Improved the layout on narrower displays. Now moves the chart below and the table fills the width when the display is
