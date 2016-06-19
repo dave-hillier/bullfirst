@@ -49,24 +49,16 @@ too narrow to fit both on the same row.
 ### Avoid the globals
 For example, you can only have one style of table. 
 
-### Get rid of px and replace with REM, EM, etc 
-Allows the design to scale better
+### Get rid of px and replace with em, rem etc 
+Allows the design to scale better - layout can change relative to the font size.
 
 ### Avoid using IDs
-They decrease re-usability of the systems. For example; you can't use the logo except in that specific div.
+They decrease re-usability of the styles. For example; you can't use the logo except in that specific div.
 
-### Inline styles debate, separation of concerns
-It is often suggested to avoid inline styles. I'm not particularly convinced by the arguments coupling between css and 
-HTML is often too high to prove that the concerns were actually separated.
-There are places like the logo where I'm not sure it makes sense to separate it out between HTML and CSS.
+### Prefer shorthand properties
+Paddings, margins, font, etc.
 
-### combine elements
-Do a refactoring pass to remove duplication from the css, use lists of selectors
-
-### shorthand properties
-Do a refactoring pass to replace paddings, margins, etc.
-
-### Use a pre-processor
+### Todo: Use a CSS pre-processor
 Consider using Sass or postcss
 Validate, pre-process and minify
 
