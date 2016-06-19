@@ -31,10 +31,10 @@ The tests helped with fixing the bug.
 
 ## Avoid global variables
 I'm not introducing new globals. Instead of using `appRoot` I'm using `angular.module('bullsfirst')`. I'd hope that this 
-would make the design more modular, as I would consider using requirejs or similar. 
+would make the design more modular, as I would consider using requirejs or similar and new modules would likely already require angular. 
 
 ## Use NPM
-angular.js is included as a regular file. Given this is a complex library, I prefer using npm to manage this package. 
+Angular.js was included as a regular file. Given this is a complex library, I prefer using npm to manage this package. 
 NPM is already in use for the project, I have no problem in using it to manage dependencies. 
 
 ## Folder structure
