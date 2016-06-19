@@ -7,55 +7,50 @@ but in a professional environment, I'd want to run multiple browsers.
 
 `npm start` should compile and serve the page. 
 
-# Change rational
+# Design Changes
+- [x] Found a matching font 
+- [x] Cut out the logo and added some horns to the title
+- [x] Cut out the icons, added to buttons
+- [x] Changed button colours and borders
+- [x] Padded around table and chart
+- [x] Styled table (lines, colouring, text, alignment, Grey border legend)
+- [x] Added missing chart title
+- [x] New Account Legend random colour
+- [x] Add grey border to document & footer
+- [x] Update totals when new account added
 
+# Other Changes
 ## Separate services from controller
 I've refactored the data out of the controller and into a service. I imagine that this would ultimately come from the a
 remote service rather than client calculated. 
 
 ## Add Unit Tests
-I've added unit tests around the controller to ensure that the totals change when an account is added. I haven't 
-exhaustively added tests like I might do because of limited time. 
+I've added unit tests around the controller to ensure that the totals change when an account is added. 
+I haven't exhaustively added tests like I might do because of limited time. 
+The tests helped with fixing the bug.
 
-## Don't expose the global variable
-The global I use is angular, rather than Bullfirst's app.
-
-## Fix: legend for new items was always blue
-Use a random colour instead.
+## Avoid global variables
+I'm not introducing new globals. Instead of using `appRoot` I'm using `angular.module('bullsfirst')`. I'd hope that this 
+would make the design more modular, as I would consider using requirejs or similar. 
 
 ## Use NPM
-angular.js is included as a regular file. Given this is a complex library, I prefer using npm to 
-manage this package. It makes upgrade simpler. 
-NPM is already in use so I have no problem in using it to manage dependencies. 
+angular.js is included as a regular file. Given this is a complex library, I prefer using npm to manage this package. 
+NPM is already in use for the project, I have no problem in using it to manage dependencies. 
 
-## folder structure
-I prefer to group things by feature rather than by type, but given the simplicity of this app its fine - 
-this scales ok to moderately complex, only becoming problematic when 
-
-It also has the disadvantage of not being enough of a self contained unit of functionality, but then again, services 
-don't always map one-to-one with views. The best structure would likely emerge as the app develops. To start with a 
-simple one will do. 
-
-## Use Webpack
-
-Managing the list of files in the HTML is a pain. Also you can benefit from minification using these tools. 
-Fewer fetches are prefered.  
-Alternatives: browserify, systemjs, 
+## Folder structure
+I prefer to group things by feature rather than by type, but given the simplicity of this app I have grouped this way. 
+This approach scales to moderately complex. Grouping by feature is difficult to show with only one feature. 
 
 ## CSS
+### Responsive
+Improved the layout on narrower displays. Now moves the chart below and the table fills the width when the display is
+too narrow to fit both on the same row. 
 
-### normalize.css first
-Can be a good practice to apply something like normalize.css to make browsers render elements more consistently.
-
-### avoid the globals
+### Avoid the globals
 For example, you can only have one style of table. 
 
 ### Get rid of px and replace with REM, EM, etc 
 Allows the design to scale better
-
-### Responsive
-Mobile devices are so widely used now, should consider designing for mobile by default. Ensure it displays on narrower 
-displays.
 
 ### Avoid using IDs
 They decrease re-usability of the systems. For example; you can't use the logo except in that specific div.
@@ -75,12 +70,3 @@ Do a refactoring pass to replace paddings, margins, etc.
 Consider using Sass or postcss
 Validate, pre-process and minify
 
-## Design enhancements
-- [x] Fixed button styles
-- [x] Found a matching font 
-- [x] Added Images for buttons
-- [x] Cut out the logo and added some horns to the title
-- [x] Styled table (lines, colouring, text, alignment)
-- [x] labels around chart
-- [x] grey border legend
-- [ ] Add grey border & footer

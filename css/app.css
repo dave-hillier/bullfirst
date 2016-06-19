@@ -44,21 +44,20 @@ button {
 
 .header-banner {
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
     background: #F89F1B;
     padding: 30px 8%;
 }
 
 .logo {
-    order:1;
-    flex:1;
+    order: 1;
+    flex: 1;
     margin-bottom: 10px;
 }
 
 .logo h1 {
     margin: 0;
     font-weight: normal;
-
 }
 
 .logo h2 {
@@ -74,15 +73,15 @@ button {
 }
 
 .header-actions {
-    order:2;
-    flex:1;
+    order: 2;
+    flex: 1;
     display: flex;
     justify-content: flex-end;
 }
 
 .header-actions button {
     background-color: #F04100;
-    font-size: 14px;
+    font-size: medium;
     height: 75px;
     line-height: 18px;
     text-align: center;
@@ -91,14 +90,44 @@ button {
 
 .content-container {
     display: flex;
-    flex-flow:row wrap;
-    padding: 2% 8%;
+    flex-flow: row wrap;
+    padding: 2% 5%;
+    justify-content: center;
+}
+
+.left-section {
+    order: 1;
+    flex-grow: 1;
+    margin-right: 20px;
+    width: 515px;
+}
+
+.left-header {
+    display: flex;
+    height: 30px;
+}
+
+.left-header button {
+    height: 25px;
+    min-width: 100px;
+}
+
+.left-header button img {
+    height: 13px;
+    vertical-align: middle;
+}
+
+.left-header > .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .accounts-table table {
     margin-top: 3px;
     width: 100%;
-    border-collapse:collapse;
+    border-collapse: collapse;
+    font-size: small;
 }
 
 .accounts-table .totals td {
@@ -113,36 +142,11 @@ button {
 .accounts-table table th {
     background-color: #8C8C8C;
     color: #F8E5C9;
-    font: bold normal 11px/22px Aller;
+    font-weight: bold;
+    font-size: smaller;
     height: 22px;
     text-transform: uppercase;
     padding: 0.15em 1em 0.15em 1em;
-}
-
-.left-section {
-    order: 1;
-    margin-right: 20px;
-}
-
-.left-header {
-    display: flex;
-    height: 30px;
-}
-
-.left-header button {
-    height: 25px;
-    width: 100px;
-}
-
-.left-header button img {
-    height: 13px;
-    vertical-align: middle;
-}
-
-.left-header > .actions {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
 }
 
 .legend {
@@ -152,7 +156,6 @@ button {
     border: 1px solid silver;
 }
 
-/* Right Section */
 .right-section {
     order: 2;
     width: 300px;
@@ -181,4 +184,3 @@ button {
 .right-align {
     text-align: right;
 }
-
