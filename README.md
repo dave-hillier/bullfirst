@@ -47,7 +47,7 @@ While this page is relatively simple, I think that having smaller files with spe
 ## CSS
 ### Responsive
 Improved the layout on narrower displays. Now moves the chart below and the table fills the width when the display is
-too narrow to fit both on the same row. 
+too narrow to fit both on the same row. The top buttons move under the logo. 
 
 ### Avoid the globals
 For example, you can only have one style of table. 
