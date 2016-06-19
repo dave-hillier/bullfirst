@@ -65,3 +65,5 @@ Paddings, margins, font, etc.
 Consider using Sass or postcss
 Validate, pre-process and minify
 
+![full](http://i.imgur.com/pAK2h1G.png)
+![narrow](http://i.imgur.com/4v4EiC2.png)
