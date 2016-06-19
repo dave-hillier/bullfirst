@@ -33,35 +33,29 @@ It also has the disadvantage of not being enough of a self contained unit of fun
 don't always map one-to-one with views. The best structure would likely emerge as the app develops. To start with a 
 simple one will do. 
 
-## Use Webpack/requirejs
+## Use Webpack
 
 Managing the list of files in the HTML is a pain. Also you can benefit from minification using these tools. 
 Fewer fetches are prefered.  
+Alternatives: browserify, systemjs, 
 
 ## CSS
 
 ### normalize.css first
-
 Can be a good practice to apply something like normalize.css to make browsers render elements more consistently.
 
 ### avoid the globals
-For example, the use of table affects all tables, that probably isn't intended. 
-
-### Avoid child selector
-In general more complex selectors should be avoided.
-
-### shorter selectors
-Do a refactoring pass to reduce the length of 
+For example, you can only have one style of table. 
 
 ### Get rid of px and replace with REM, EM, etc 
 Allows the design to scale better
 
 ### Responsive
-Mobile devices are so widely used now, should consider designing for mobile by default. Use a media query.
+Mobile devices are so widely used now, should consider designing for mobile by default. Ensure it displays on narrower 
+displays.
 
 ### Avoid using IDs
-They decrease portability. All pages that want to appear like this have to have the same ids. It's better to use classes, for example, it allows 
-you to more easily add two sections that look like the content div. 
+They decrease re-usability of the systems. For example; you can't use the logo except in that specific div.
 
 ### Inline styles debate, separation of concerns
 It is often suggested to avoid inline styles. I'm not particularly convinced by the arguments coupling between css and 

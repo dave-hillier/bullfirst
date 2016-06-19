@@ -15,12 +15,21 @@
     font-style: italic;
 }
 
-/* TODO: limit the scope of these globals */
 body {
     font-size: 14px;
     font-family: Aller, sans-serif;
     max-width: 1000px;
     margin: 0 auto;
+    border: 8px solid #333;
+}
+
+footer {
+    clear: both;
+    background-color: #333;
+    color: white;
+    font: italic 10px Aller;
+    height: 50px;
+    padding: 7px 0 0 60px;
 }
 
 button {
@@ -33,19 +42,26 @@ button {
     transition: background-color 0.3s;
 }
 
-/* Header */
-#header {
+.header-banner {
     display: flex;
+    flex-flow:row wrap;
     background: #F89F1B;
     padding: 30px 8%;
 }
 
-#header .logo h1 {
-    margin: 0;
-    font-weight: normal;
+.logo {
+    order:1;
+    flex:1;
+    margin-bottom: 10px;
 }
 
-#header .logo h2 {
+.logo h1 {
+    margin: 0;
+    font-weight: normal;
+
+}
+
+.logo h2 {
     font-style: italic;
     margin: 0;
     padding-left: 18px;
@@ -53,17 +69,18 @@ button {
     font-weight: normal;
 }
 
-#header .logo img {
+.logo img {
     margin-bottom: -11px;
 }
 
-#header .actions {
-    flex: 1;
+.header-actions {
+    order:2;
+    flex:1;
     display: flex;
     justify-content: flex-end;
 }
 
-#header .actions button {
+.header-actions button {
     background-color: #F04100;
     font-size: 14px;
     height: 75px;
@@ -72,28 +89,28 @@ button {
     width: 110px;
 }
 
-#header .actions img {
-    vertical-align: middle; 
-}
-
-#content {
+.content-container {
     display: flex;
-    margin-top: 20px;
-    padding-left: 8%;
-    padding-right: 8%;
+    flex-flow:row wrap;
+    padding: 2% 8%;
 }
 
-#content table {
+.accounts-table table {
     margin-top: 3px;
     width: 100%;
     border-collapse:collapse;
 }
-#content table td {
+
+.accounts-table .totals td {
+    border-top: 3px solid #8C8C8C;
+}
+
+.accounts-table td {
     padding: 5px 15px 5px 15px;
     border-top: 1px solid #ccc;
 }
 
-#content table th {
+.accounts-table table th {
     background-color: #8C8C8C;
     color: #F8E5C9;
     font: bold normal 11px/22px Aller;
@@ -102,50 +119,46 @@ button {
     padding: 2px 15px 2px 15px;
 }
 
-/* Left Section */
-
 .left-section {
-    flex: 1;
+    order: 1;
     margin-right: 20px;
 }
-.left-section .header {
+
+.left-header {
     display: flex;
     height: 30px;
 }
 
-.left-section .header button {
+.left-header button {
     height: 25px;
     width: 100px;
 }
 
-.left-section .header button img {
+.left-header button img {
     height: 13px;
     vertical-align: middle;
 }
 
-.left-section .header > .actions { /* Should child selectors be avoided */
+.left-header > .actions {
     flex: 1;
     display: flex;
     justify-content: flex-end;
 }
 
-
-.totals td {
-    border-top: 3px solid #8C8C8C;
-}
-
 .legend {
     width: 30px;
     height: 16px;
-    margin: 0 auto; 
+    margin: 0 auto;
     border: 1px solid silver;
 }
 
 /* Right Section */
 .right-section {
+    order: 2;
     width: 300px;
     background: #ccc;
 }
+
 .right-section .chart {
     height: 300px;
 }
@@ -161,9 +174,6 @@ button {
     font-size: 0.8em;
 }
 
-
-/* generic classes */
-
 .left-align {
     text-align: left;
 }
@@ -171,3 +181,4 @@ button {
 .right-align {
     text-align: right;
 }
+

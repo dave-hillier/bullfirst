@@ -1,0 +1,28 @@
+<table>
+    <tr>
+        <th class="left-align">Name</th>
+        <th class="right-align">Market Value</th>
+        <th class="right-align">Cash</th>
+        <th>Legend</th>
+    </tr>
+
+    <tr ng-repeat="row in rows">
+        <td>{{ row.name }}</td>
+        <td class="right-align">{{ row.marketValue | currency }}</td>
+        <td class="right-align">{{ row.cash | currency }}</td>
+        <td>
+            <div class="legend" style="background-color: {{ row.legend }}"></div>
+        </td>
+    </tr>
+
+    <tr class="totals">
+        <td></td>
+        <td class="right-align">
+            <strong>{{ totals.marketValue | currency }}</strong>
+        </td>
+        <td class="right-align">
+            <strong>{{ totals.cash | currency }}</strong>
+        </td>
+        <td></td>
+    </tr>
+</table>

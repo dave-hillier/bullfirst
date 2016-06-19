@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Bullsfirst</title>
-
     <link rel="stylesheet" href="css/app.css">
 
-    <!-- Libs -->
     <script src="node_modules/angular/angular.js"></script>
 
-    <!-- Application -->
     <script src="js/app.js"></script>
     <script src="js/services/AccountsStorage.js"></script>
     <script src="js/controllers/AccountsController.js"></script>
@@ -17,8 +15,7 @@
 <body ng-app="bullsfirst">
 
 <div ng-include="'header.html'"></div>
-
-<div ng-include="'content.html'"></div>
-
+<div class="content-container" ng-include="'content.html'" ng-controller="AccountsController"></div>
+<footer>This is a demo application. All data displayed is fictitious.</footer>
 </body>
 </html>

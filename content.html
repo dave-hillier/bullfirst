@@ -1,49 +1,19 @@
-<div id="content" ng-controller="AccountsController">
-    <div class="left-section">
-        <div class="header">
-            <span style="font-size:18px;">Accounts</span>
+<div class="left-section">
+    <div class="left-header">
+        <span style="font-size:18px;">Accounts</span>
 
-            <div class="actions">
-                <button ng-click="addAccount()"><img src="img/plus-icon.png"/>&nbsp;Add Account</button>
-                <button><img src="img/refresh-icon.png"/>&nbsp;Refresh</button>
-            </div>
+        <div class="actions">
+            <button ng-click="addAccount()"><img src="img/plus-icon.png"/>&nbsp;Add Account</button>
+            <button><img src="img/refresh-icon.png"/>&nbsp;Refresh</button>
         </div>
-
-        <table>
-            <tr>
-                <th class="left-align">Name</th>
-                <th class="right-align">Market Value</th>
-                <th class="right-align">Cash</th>
-                <th>Legend</th>
-            </tr>
-
-            <tr ng-repeat="row in rows">
-                <td>{{ row.name }}</td>
-                <td class="right-align">{{ row.marketValue | currency }}</td>
-                <td class="right-align">{{ row.cash | currency }}</td>
-                <td>
-                    <div class="legend" style="background-color: {{ row.legend }}"></div>
-                </td>
-            </tr>
-
-            <tr class="totals">
-                <td></td>
-                <td class="right-align">
-                    <strong>{{ totals.marketValue | currency }}</strong>
-                </td>
-                <td class="right-align">
-                    <strong>{{ totals.cash | currency }}</strong>
-                </td>
-                <td></td>
-            </tr>
-        </table>
     </div>
 
-    <div class="right-section">
-        <div class="chart-title">All Accounts</div>
-        <img class="chart" src="chart.png" alt="Chart">
+    <div class="accounts-table" ng-include="'table.html'"></div>
+</div>
 
-        <div class="help-label">Click on an account to view positions</div>
-    </div>
+<div class="right-section">
+    <div class="chart-title">All Accounts</div>
+    <img class="chart" src="chart.png" alt="Chart">
 
+    <div class="help-label">Click on an account to view positions</div>
 </div>
