@@ -17,8 +17,11 @@ remote service rather than client calculated.
 I've added unit tests around the controller to ensure that the totals change when an account is added. I haven't 
 exhaustively added tests like I might do because of limited time. 
 
-## Dont expose the global variable
+## Don't expose the global variable
 The global I use is angular, rather than Bullfirst's app.
+
+## Fix: legend for new items was always blue
+Use a random colour instead.
 
 ## Use NPM
 angular.js is included as a regular file. Given this is a complex library, I prefer using npm to 
